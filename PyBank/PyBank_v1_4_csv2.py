@@ -58,7 +58,7 @@ print ("Greatest Increase in Revenue:  " + str(greatest_date) + " $" + str(great
 print ("Greatest Decrease in Revenue:  " + str(least_date) + " $" + str(least_value))
 
 # Save results as a text file
-sys.stdout = open('pybank.txt', 'w')
+sys.stdout = open('pybank_csv2.txt', 'w')
 print ("Financial Analysis")
 print ("----------------------------")
 print ("Total Months: " + str(months))

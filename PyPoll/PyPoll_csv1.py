@@ -45,7 +45,9 @@ votes = list(candidate_list_counter.values())
 
 # Calcutae percent of votes won for each candiate and store it
 for i in range(0, t):
-	percent_of_votes.append((votes[i] / n) * 100)
+	p = (votes[i] / n) * 100
+	percent_won = round(p, 1)
+	percent_of_votes.append(percent_won)
 
 # Find the winner
 winner = max(candidate_list_counter, key=candidate_list_counter.get)
@@ -63,7 +65,7 @@ print (winner, candidate_list_counter[winner])
 print ("-------------------------")
 
 # Save results as a text file
-sys.stdout = open('Election_Results.txt', 'w')
+sys.stdout = open('Election_Results_csv1.txt', 'w')
 print ("Election Results")
 print ("-------------------------")
 print ("Total Votes: " + str(total_votes))
